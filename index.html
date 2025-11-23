@@ -5,25 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Custom Furniture — SpriteXx7</title>
   <style>
-    body { font-family: sans-serif; margin: 20px; line-height: 1.5; }
-    h1 { font-size: 28px; }
-    .product { border: 1px solid #ddd; padding: 12px; margin-top: 12px; border-radius: 8px; }
+    body { font-family: system-ui, Arial, sans-serif; margin: 18px; line-height: 1.45; background:#fafafa; color:#111; }
+    header { margin-bottom:12px; }
+    h1 { font-size:22px; margin:0 0 6px; }
+    #catalog { display:grid; gap:10px; }
+    .product { background:#fff; padding:10px; border-radius:8px; box-shadow:0 1px 2px rgba(0,0,0,0.04); }
+    .product img { width:100%; height:auto; border-radius:6px; display:block; margin-bottom:8px; }
+    form input, form textarea { width:100%; padding:10px; margin:8px 0; box-sizing:border-box; border:1px solid #ddd; border-radius:6px; }
+    button { padding:10px 14px; border-radius:6px; border:none; background:#0b74de; color:#fff; font-weight:600; }
+    footer { margin-top:18px; font-size:12px; color:#666; }
   </style>
 </head>
 <body>
-  <h1>Custom Furniture — Handmade</h1>
-  <p>Welcome! We make custom furniture. Contact us for inquiries.</p>
+  <header>
+    <h1>SpriteXx7 — Custom Furniture</h1>
+    <p>Handmade furniture. Contact: <b>your-email@example.com</b></p>
+  </header>
 
-  <div class="product">
-    <h2>Oak Table</h2>
-    <p>High-quality oak table, custom-sized.</p>
-  </div>
+  <main id="catalog">
+    <article class="product">
+      <!-- If you add an image later, it should be: /images/table1.jpg -->
+      <img src="/images/table1.jpg" alt="Oak table" onerror="this.style.display='none'">
+      <h2>Oak Table</h2>
+      <p>High-quality oak table — custom sizes available.</p>
+    </article>
 
-  <div class="product">
-    <h2>Walnut Chair</h2>
-    <p>Hand-finished walnut dining chair.</p>
-  </div>
+    <article class="product">
+      <img src="/images/chair1.jpg" alt="Walnut chair" onerror="this.style.display='none'">
+      <h2>Walnut Chair</h2>
+      <p>Hand-finished walnut dining chair with optional upholstery.</p>
+    </article>
 
-  <p>Contact us at: <b>your-email@example.com</b></p>
+    <section style="margin-top:14px;">
+      <h3>Order / Inquiry</h3>
+      <form id="contactForm" action="https://formspree.io/f/yourformid" method="POST">
+        <input name="name" placeholder="Your name" required>
+        <input name="email" placeholder="Email" required>
+        <textarea name="details" placeholder="Describe what you want" required></textarea>
+        <button type="submit">Send Inquiry</button>
+      </form>
+      <p style="font-size:90%; color:#666;">(Replace the form action with your Formspree URL later.)</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> SpriteXx7</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const f = document.getElementById('contactForm');
+    f.addEventListener('submit', () => {
+      const b = f.querySelector('button'); b.textContent = 'Sending...'; b.disabled = true;
+    });
+  </script>
 </body>
 </html>
