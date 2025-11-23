@@ -61,3 +61,132 @@
   </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Furniture Website</title>
+  <!-- Link to CSS file -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Custom Furniture Made for You</h1>
+    <p>Explore our exclusive collection of furniture. Place an order or send us a message to bring your vision to life.</p>
+    <a href="#order" class="button">Place Your Order</a>
+  </header>
+
+  <!-- About Section -->
+  <section class="about">
+    <h2>About Us</h2>
+    <p>We specialize in handcrafted furniture designed to match your style and space. Quality, design, and customer satisfaction are our top priorities.</p>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery">
+    <h2>Our Collection</h2>
+    <div class="gallery-images">
+      <img src="images/chair1.jpg" alt="Wooden Chair">
+      <img src="images/table1.jpg" alt="Dining Table">
+      <img src="images/sofa1.jpg" alt="Modern Sofa">
+    </div>
+  </section>
+
+  <!-- Order Section -->
+  <section id="order" class="order">
+    <h2>Place Your Order / Inquiry</h2>
+    <p>Tell us what you need, and we’ll create a custom piece just for you. Contact us to get started!</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 My Furniture Website | All rights reserved.</p>
+  </footer>
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #F5F5F5;
+  color: #2C3E50;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #E67E22;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+.button {
+  display: inline-block;
+  background-color: #fff;
+  color: #E67E22;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+
+/* Sections */
+section {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #E67E22;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Gallery */
+.gallery-images {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery-images img {
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px 10px;
+  background-color: #2C3E50;
+  color: white;
+}
+</body>
+</html>
